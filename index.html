@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#7700ff">
+    <!-- <link rel="stylesheet" href="/css/index.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>web</title>
+  <style>
+    
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #00ccff, #7700ff);
+    padding: 20px;
+}
+
+.registration-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgb(0, 0, 0, 0.15);
+    padding: 40px;
+    border-radius: 16px;
+}
+
+.registration-title {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.registration-form {
+    display: grid;
+    gap: 24px;
+}
+
+.form-group {
+    display: grid;
+    gap: 8px;
+}
+
+.form-group-other {
+    display: grid;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.form-label {
+    color: #444;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.form-input {
+    padding: 14px 16px;
+    border: 2px solid rgb(225, 229, 233);
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #7700ff;
+    box-shadow: 0 0 0 3px #7700ff1a;
+}
+
+.submit-button,
+.submit-button-other {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-button {
+    background: linear-gradient(45deg, #00ccff, #7700ff);
+    margin-top: 10px;
+}
+
+
+.submit-button:hover,
+.submit-button-other:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:active,
+.submit-button-other:active {
+    transform: translateY(0);
+}
+    
+  </style>
+
+  
+</head>
+
+<body>
+
+    <div class="registration-card">
+        <h1 class="registration-title">Create Account</h1>
+        <form class="registration-form">
+            <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pass" class="form-label">Password</label>
+                <input type="password" id="pass" class="form-input" placeholder="Enter your password" maxlength="8" minlength="6" required>
+
+
+            </div>
+
+            <button type="submit" class="submit-button">Register Now</button>
+
+            <div class="form-group-other">
+                <button type="submit" class="submit-button-other"
+                    style="background: linear-gradient(45deg, #4285F4, #34A853)">Login With <i
+                        class="fa-brands fa-google"></i></button>
+
+
+                <button type="submit" class="submit-button-other"
+                    style="background: linear-gradient(45deg, #1877F2, #0056d2);">Login With <i
+                        class="fa-brands fa-facebook"></i></button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
